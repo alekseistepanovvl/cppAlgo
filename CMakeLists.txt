@@ -30,4 +30,7 @@ add_executable(all_tests ${TEST_FILES})
 target_link_libraries(all_tests solutions gtest gtest_main)
 
 include(GoogleTest)
-gtest_discover_tests(all_tests)
+gtest_discover_tests(
+        all_tests
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
